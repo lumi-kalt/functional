@@ -1,4 +1,4 @@
 constexpr auto identity(auto&& a)
--> auto {
-    return a;
+-> decltype(auto) {
+    return std::forward<decltype(a)>(a);
 }
